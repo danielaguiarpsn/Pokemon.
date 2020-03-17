@@ -21,19 +21,20 @@ FROM
         
 WHERE 
         TABLE_SCHEMA = 'pokedex'
-         AND TABLE_NAME = 'Pokemon'
+         AND TABLE_NAME = 'Pokemon';
 ```
 
 3)	Selecione todos os pokémons cadastrados no banco de dados.
 
-
-R: USE pokedex;
-   SELECT* FROM Pokemon
+```sql
+USE pokedex;
+SELECT* FROM Pokemon
+```  
 
 
 4)	Selecione o numero, nome, cor, altura_m e peso_kg de todos os pokémons cadastrados.
-
-R: USE pokedex; 
+```SQL
+USE pokedex; 
    SELECT numero,
           nome,
           cor,
@@ -41,6 +42,7 @@ R: USE pokedex;
           peso_kg
    FROM
         Pokemon;
+ ```
         
         
 5)	Qual é o numero e o nome de todos os pokémons da primeira geração?
