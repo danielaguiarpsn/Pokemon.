@@ -15,13 +15,14 @@ USE pokedex;
 
 2)	Obtenha informações da estrutura da tabela Pokémon.
 
-R: FROM 
+```SQL 
+FROM 
         infotmation_schema.TABLES
         
-   WHERE 
+WHERE 
         TABLE_SCHEMA = 'pokedex'
          AND TABLE_NAME = 'Pokemon'
-
+```
 
 3)	Selecione todos os pokémons cadastrados no banco de dados.
 
