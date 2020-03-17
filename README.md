@@ -9,9 +9,9 @@ Consultas
 
 
 1)	Selecione o banco de dados (esquema) pokédex.
-
-R:   USE pokedex;
-
+```sql
+USE pokedex;
+```
 
 2)	Obtenha informações da estrutura da tabela Pokémon.
 
