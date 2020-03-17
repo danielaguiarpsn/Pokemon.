@@ -99,11 +99,13 @@ R:  USE pokedex;
 
 12) Selecione todos pokémons que não possuem tipo secundário, ou seja, tipo2. 
 
-R:  USE pokedex; 
+```sql
+USE pokedex; 
 
-   SELECT numero, nome
-   FROM Pokemon
-   WHERE tipo2 IS NULL;
+SELECT numero, nome
+FROM Pokemon
+WHERE tipo2 IS NULL;
+```
 
 13) Selecione numero, nome, tipo1, tipo2 de todos os pokémons que possuem o peso entre 100kg e 500kg. 
 
