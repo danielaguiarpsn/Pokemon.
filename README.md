@@ -149,7 +149,10 @@ R: USE pokedex;
 18) Qual é o pokémon mais poderoso de todas as gerações?
 
 R: USE pokedex; 
-   SELECT *
+SELECT  
+      *
+FROM Pokemon
+ORDER BY total
 19) Selecione o numero, nome, defesa, ataque dos pokémons com defesa > 60 e ataque <= 70; ordenados decrescente pelo total. 
 20) Selecione todos os pokémons do tipo Planta e Venenoso que não sejam Green, ordenado crescente pelo nome. 
 21) Selecione de maneira crescente os nomes dos pokémons que possuem a letra y na 4ª posição do nome. 
