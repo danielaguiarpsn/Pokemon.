@@ -47,57 +47,65 @@ USE pokedex;
         
 5)	Qual é o numero e o nome de todos os pokémons da primeira geração?
 
-R: USE pokedex;
+```sqlUSE pokedex;
 
    SELECT numero, nome 
    FROM Pokemon
    WHERE geração = 1;
+   ```
 
 
 6)	Quais são os pokémons Amarelo da primeira geração?
 
-R:  USE pokedex;
+```sql
+USE pokedex;
 
    SELECT * FROM Pokemon
    WHERE geracao = 1
    AND cor = 'amarelo'
+   ```
 
 
 7)	Qual é o pokémon mais forte?
 
-R:  USE pokedex;
+```sql
+USE pokedex;
 
    SELECT * FROM Pokemon
    ORDER BY total DESC
    LIMIT 1;
-   
+   ```
    
 8)	Selecione o numero, nome e tipo1; de todos os pokémons cujo tipo primário é Fire.
 
-R:  USE pokedex; 
+```sql
+USE pokedex; 
 
    SELECT numero, nome, tipo1
    FROM Pokemon
    WHERE tipo1 = 'Fire';
+   ```
    
    
 10)	Selecione em ordem decrescente o numero, nome e defesa de todos os pokémons.
 
-R:  USE pokedex;
+```sql
+USE pokedex;
 
    SELECT numero, nome, defesa
    FROM Pokemon 
    ORDER BY defesa DESC;
+   ```
    
 
 11)	Qual o pokémon possui menor taxa de captura? Selecione apenas numero e nome.
-
-R:  USE pokedex; 
-
-   SELECT numero, nome
-   FROM Pokemon
-   ORDER BY taxa_captura ASC
-   LIMIT 1;
+```sql
+USE pokedex;
+SELECT numero, nome
+FROM Pokemon
+ORDER BY taxa_captura ASC
+LIMIT 1;
+   ```
    
 
 12) Selecione todos pokémons que não possuem tipo secundário, ou seja, tipo2. 
