@@ -1,7 +1,4 @@
 # Pokemon.
-ATV Diego
-
-# Pokemon.
 ATV Diego:
 
 
