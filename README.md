@@ -120,55 +120,88 @@ WHERE tipo2 IS NULL;
 
 13) Selecione numero, nome, tipo1, tipo2 de todos os pokémons que possuem o peso entre 100kg e 500kg. 
 
-R: USE pokedex; 
+```sql
+USE pokedex; 
    SELECT numero,
        nome,
        tipo1
        yipo2
    FROM Pokemon
    WHERE peso_kg > 100 AND peso_kg < 50;
+   ```
 
 14) Crie um ranking dos top 10 pokémons mais velozes, contendo numero, nome e velocidade. 
 
-R: USE pokedex; 
+```sql
+USE pokedex; 
    SELECT numero, nome, velocidade
    FROM Pokemon
    ORDER BY velocidade DESC
    LIMIT 10;
+   ```
    
 15) Selecione numero, nome, tipo1, tipo2, taxa_captura dos pokémons que possuem os dois tipos e tenham uma taxa de captura acima de 100. Ordene os resultados decrescente pela taxa de captura. 
 
-R: USE pokedex; 
+```sql
+USE pokedex; 
    numero, nome, tipo1, tipo2, taxa_captura
    WHERE taxa_captura > 100
    AND tipo2 IS NOT NULL
    ORDER BY taxa_captura DESC;
+   ```
    
 16) Quais são os tipos primários dos pokémons? 
 
-R: USE pokedex; 
+```sql
+USE pokedex; 
    FROM Pokemon
    GROUP BY tipo1;
+   ```
    
   
 17) Selecione o numero, nome e cor; de todos os pokémons que o nome começa com a letra D. 
 
-R: USE pokedex; 
+```sql
+USE pokedex; 
    SELECT numero, nome, cor
    FROM Pokemon
    WHERE nome LIKE 'D%';
+   ```
    
    
 18) Qual é o pokémon mais poderoso de todas as gerações?
 
-R: USE pokedex; 
-SELECT  
-      *
-FROM Pokemon
-ORDER BY total
+USE pokedex; 
+SELECT  nome 
+FROM pokemon
+ORDER BY toal ASC LIMIT 1;
+      
 19) Selecione o numero, nome, defesa, ataque dos pokémons com defesa > 60 e ataque <= 70; ordenados decrescente pelo total. 
+
+USE pokedex; 
+SELECT numero, nome, defesa, ataque
+FROM Pokemon
+WHERE defesa > 60
+AND ataque<=70
+ORDER BY total ASC;
+
 20) Selecione todos os pokémons do tipo Planta e Venenoso que não sejam Green, ordenado crescente pelo nome. 
+
+USE pokedex;
+SELECT nome
+FROM Pokemon
+WHERE tipo1 = 'Planta" 
+OR tipo1 = 'Venenoso'
+AND cor != 'Green'
+ORDER BY nome;
+
 21) Selecione de maneira crescente os nomes dos pokémons que possuem a letra y na 4ª posição do nome. 
+
+USE pokedex;
+SELECT nome
+FROM Pokemon
+WHERE nome
+
 22) Qual é o maior valor de ataque_especial cadastrado? 
 23) Selecione o numero, nome e altura_m dos pokémons que possuem altura acima de 2,10m. 
 24) Quais são as diferentes tipos de cores dos pokémons? Apresente os resultados de maneira crescente pelo nome da cor. 
